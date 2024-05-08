@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage[style=iso-numeric, currentlang]{biblatex}
+\addbibresource{sample.bib}
+\usepackage{hyperref}
+
+
+% entferne den Punkt am Ende
+\renewcommand{\finentrypunct}{}            
+
+% Quellen werdne in [1] statt in 1. 2. usw ausgegeben
+\DeclareFieldFormat{labelnumberwidth}{[#1]}
+
+\begin{document}
+
+\nocite{*}
+\cite{dirac}
+\printbibliography
+
+\end{document}
